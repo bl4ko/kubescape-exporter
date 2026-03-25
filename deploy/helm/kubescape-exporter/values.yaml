@@ -11,6 +11,8 @@ port: 8080
 
 logLevel: info
 
+priorityClassName: ""
+
 resources:
   requests:
     cpu: 10m
