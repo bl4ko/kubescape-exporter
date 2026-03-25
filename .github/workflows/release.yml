@@ -1,0 +1,19 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build:
+    name: Build and push image
+    uses: bl4ko/shared-actions/.github/workflows/build_image.yml@main
+    with:
+      tags: "ghcr.io/bl4ko/kubescape-exporter:${{ github.ref_name }},ghcr.io/bl4ko/kubescape-exporter:latest"
+      platform: "linux/amd64"
+      runs-on: "ubuntu-latest"
