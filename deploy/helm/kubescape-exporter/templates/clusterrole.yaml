@@ -1,0 +1,21 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ .Chart.Name }}
+  labels:
+    app.kubernetes.io/name: {{ .Chart.Name }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+rules:
+  - apiGroups:
+      - spdx.softwarecomposition.kubescape.io
+    resources:
+      - vulnerabilitymanifests
+      - vulnerabilitymanifestsummaries
+      - vulnerabilitysummaries
+      - workloadconfigurationscans
+      - workloadconfigurationscansummaries
+      - configurationscansummaries
+    verbs:
+      - get
+      - list
+      - watch

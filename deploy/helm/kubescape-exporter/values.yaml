@@ -1,0 +1,31 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/bl4ko/kubescape-exporter
+  tag: ""
+  pullPolicy: IfNotPresent
+
+namespace: kubescape
+
+port: 8080
+
+logLevel: info
+
+resources:
+  requests:
+    cpu: 10m
+    memory: 64Mi
+  limits:
+    cpu: 100m
+    memory: 200Mi
+
+serviceMonitor:
+  enabled: true
+  interval: 60s
+  scrapeTimeout: 30s
+  additionalLabels:
+    release: monitor
+
+serviceAccount:
+  create: true
+  name: kubescape-exporter
