@@ -23,11 +23,12 @@ import (
 
 func main() {
 	cfg := config.Config{}
-	flag.IntVar(&cfg.Port, "port", 9090, "HTTP server port")
-	flag.StringVar(&cfg.Kubeconfig, "kubeconfig", "", "path to kubeconfig file (defaults to in-cluster)")
-	flag.StringVar(&cfg.LogLevel, "log-level", "info", "log level (debug, info, warn, error)")
-	flag.StringVar(&cfg.Namespace, "namespace", "kubescape", "namespace where VulnerabilityManifests live")
-	flag.Parse()
+	fs := flag.NewFlagSet("kubescape-exporter", flag.ExitOnError)
+	fs.IntVar(&cfg.Port, "port", 9090, "HTTP server port")
+	fs.StringVar(&cfg.Kubeconfig, "kubeconfig", "", "path to kubeconfig file (defaults to in-cluster)")
+	fs.StringVar(&cfg.LogLevel, "log-level", "info", "log level (debug, info, warn, error)")
+	fs.StringVar(&cfg.Namespace, "namespace", "kubescape", "namespace where VulnerabilityManifests live")
+	fs.Parse(os.Args[1:])
 
 	setupLogging(cfg.LogLevel)
 
