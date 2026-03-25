@@ -3,4 +3,4 @@ name: kubescape-exporter
 description: Prometheus exporter and REST API for Kubescape CRD data
 type: application
 version: 0.1.0
-appVersion: "0.1.0"
+appVersion: "v0.1.0"
