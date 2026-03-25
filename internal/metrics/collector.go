@@ -112,7 +112,16 @@ func (c *Collector) collectWorkloadMetrics(ch chan<- prometheus.Metric, wl *stor
 		)
 	}
 
+	type vulnKey struct {
+		cveID, pkgName, pkgVersion string
+	}
+	seenVulns := make(map[vulnKey]bool)
 	for _, cve := range wl.CVEs {
+		vk := vulnKey{cve.ID, cve.PackageName, cve.PackageVersion}
+		if seenVulns[vk] {
+			continue
+		}
+		seenVulns[vk] = true
 		fixVer := ""
 		if len(cve.FixVersions) > 0 {
 			fixVer = cve.FixVersions[0]
@@ -159,7 +168,16 @@ func (c *Collector) collectComplianceMetrics(ch chan<- prometheus.Metric, comp *
 		)
 	}
 
+	type ctrlKey struct {
+		id, workload string
+	}
+	seenCtrls := make(map[ctrlKey]bool)
 	for _, ctrl := range comp.Controls {
+		ck := ctrlKey{ctrl.ID, comp.Key.WorkloadName}
+		if seenCtrls[ck] {
+			continue
+		}
+		seenCtrls[ck] = true
 		val := float64(0)
 		if ctrl.Status == "failed" {
 			val = 1
