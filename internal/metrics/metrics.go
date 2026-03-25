@@ -33,4 +33,16 @@ var (
 		[]string{"resource_type"},
 		nil,
 	)
+	vulnDetailDesc = prometheus.NewDesc(
+		"kubescape_vulnerability_info",
+		"Per-CVE detail for runtime-relevant vulnerabilities (value is CVSS score)",
+		[]string{"namespace", "workload", "workload_kind", "container", "image_tag", "cve_id", "severity", "fix_state", "fix_version", "package_name", "package_version"},
+		nil,
+	)
+	complianceDetailDesc = prometheus.NewDesc(
+		"kubescape_compliance_control_info",
+		"Per-control compliance detail (value 1=failed, 0=passed)",
+		[]string{"namespace", "workload", "workload_kind", "control_id", "control_name", "severity", "status"},
+		nil,
+	)
 )

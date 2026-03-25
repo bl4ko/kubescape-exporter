@@ -29,6 +29,8 @@ func (c *Collector) Describe(ch chan<- *prometheus.Desc) {
 	ch <- complianceCountDesc
 	ch <- exporterInfoDesc
 	ch <- watchedResourcesDesc
+	ch <- vulnDetailDesc
+	ch <- complianceDetailDesc
 }
 
 // Collect gathers metrics from the store and sends them to the channel.
@@ -109,6 +111,27 @@ func (c *Collector) collectWorkloadMetrics(ch chan<- prometheus.Metric, wl *stor
 			"relevant",
 		)
 	}
+
+	for _, cve := range wl.CVEs {
+		fixVer := ""
+		if len(cve.FixVersions) > 0 {
+			fixVer = cve.FixVersions[0]
+		}
+		ch <- prometheus.MustNewConstMetric(vulnDetailDesc, prometheus.GaugeValue,
+			cve.CVSSScore,
+			wl.Key.Namespace,
+			wl.Key.WorkloadName,
+			wl.Key.WorkloadKind,
+			wl.Key.Container,
+			wl.ImageTag,
+			cve.ID,
+			cve.Severity,
+			cve.FixState,
+			fixVer,
+			cve.PackageName,
+			cve.PackageVersion,
+		)
+	}
 }
 
 func (c *Collector) collectComplianceMetrics(ch chan<- prometheus.Metric, comp *store.ComplianceData) {
@@ -133,6 +156,23 @@ func (c *Collector) collectComplianceMetrics(ch chan<- prometheus.Metric, comp *
 			comp.Key.WorkloadKind,
 			k.severity,
 			k.status,
+		)
+	}
+
+	for _, ctrl := range comp.Controls {
+		val := float64(0)
+		if ctrl.Status == "failed" {
+			val = 1
+		}
+		ch <- prometheus.MustNewConstMetric(complianceDetailDesc, prometheus.GaugeValue,
+			val,
+			comp.Key.Namespace,
+			comp.Key.WorkloadName,
+			comp.Key.WorkloadKind,
+			ctrl.ID,
+			ctrl.Name,
+			ctrl.Severity,
+			ctrl.Status,
 		)
 	}
 }
