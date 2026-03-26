@@ -38,7 +38,13 @@ func (c *Collector) Collect(ch chan<- prometheus.Metric) {
 	ch <- prometheus.MustNewConstMetric(exporterInfoDesc, prometheus.GaugeValue, 1, c.version)
 
 	images := c.store.GetAllImages()
+	seenImages := make(map[string]bool)
 	for _, img := range images {
+		imageKey := img.Name + "\x00" + img.Tag
+		if seenImages[imageKey] {
+			continue
+		}
+		seenImages[imageKey] = true
 		c.collectImageMetrics(ch, img)
 	}
 
