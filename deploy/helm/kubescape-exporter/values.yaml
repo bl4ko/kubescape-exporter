@@ -16,10 +16,10 @@ priorityClassName: ""
 resources:
   requests:
     cpu: 10m
-    memory: 64Mi
+    memory: 128Mi
   limits:
-    cpu: 100m
-    memory: 200Mi
+    cpu: 200m
+    memory: 600Mi
 
 serviceMonitor:
   enabled: true
