@@ -3,7 +3,7 @@ module github.com/bl4ko/kubescape-exporter
 go 1.26.1
 
 require (
-	github.com/kubescape/storage v0.0.266
+	github.com/kubescape/storage v0.0.267
 	github.com/prometheus/client_golang v1.23.2
 	k8s.io/apimachinery v0.35.3
 	k8s.io/client-go v0.35.3
@@ -15,7 +15,7 @@ require (
 	github.com/anchore/packageurl-go v0.1.1-0.20250220190351-d62adb6e1115 // indirect
 	github.com/anchore/stereoscope v0.1.9 // indirect
 	github.com/anchore/syft v1.32.0 // indirect
-	github.com/armosec/armoapi-go v0.0.693 // indirect
+	github.com/armosec/armoapi-go v0.0.696 // indirect
 	github.com/armosec/gojay v1.2.17 // indirect
 	github.com/armosec/utils-go v0.0.58 // indirect
 	github.com/armosec/utils-k8s-go v0.0.30 // indirect
