@@ -5,7 +5,7 @@ go 1.26.1
 require (
 	github.com/kubescape/storage v0.0.268
 	github.com/prometheus/client_golang v1.23.2
-	k8s.io/apimachinery v0.35.3
+	k8s.io/apimachinery v0.35.4
 	k8s.io/client-go v0.35.3
 )
 
