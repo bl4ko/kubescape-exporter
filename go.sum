@@ -444,6 +444,8 @@ github.com/kubescape/storage v0.0.275 h1:HblF7Ts06caud2pQqKjJwFLFz1JCQ9XgzRKUTg8
 github.com/kubescape/storage v0.0.275/go.mod h1:8hB9vgIcuF2xff//+2fbb8G8aU8+PnTDRwhMVRv54Vs=
 github.com/kubescape/storage v0.0.277 h1:SxmjRluv8KsrMA9k7Tbzv0ZENpAq9TRg+Bj1r4cmWh0=
 github.com/kubescape/storage v0.0.277/go.mod h1:FpV6tCrYXlp2kKWza4yr7zf2Y1q7IGgx871ndN7SMNo=
+github.com/kubescape/storage v0.0.278 h1:/pOtKul443yb2Fzg/4MFq29oOaFoJg1okQaCGbcEVOk=
+github.com/kubescape/storage v0.0.278/go.mod h1:FpV6tCrYXlp2kKWza4yr7zf2Y1q7IGgx871ndN7SMNo=
 github.com/kylelemons/godebug v1.1.0 h1:RPNrshWIDI6G2gRW9EHilWtl7Z6Sb1BR0xunSBf0SNc=
 github.com/kylelemons/godebug v1.1.0/go.mod h1:9/0rRGxNHcop5bhtWyNeEfOS8JIWk580+fNqagV/RAw=
 github.com/lunixbochs/vtclean v1.0.0/go.mod h1:pHhQNgMf3btfWnGBVipUOjRYhoOsdGqdm/+2c2E2WMI=
