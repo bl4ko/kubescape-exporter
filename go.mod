@@ -3,7 +3,7 @@ module github.com/bl4ko/kubescape-exporter
 go 1.26.1
 
 require (
-	github.com/kubescape/storage v0.0.280
+	github.com/kubescape/storage v0.0.281
 	github.com/prometheus/client_golang v1.23.2
 	k8s.io/apimachinery v0.36.1
 	k8s.io/client-go v0.36.1
@@ -74,7 +74,7 @@ require (
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/compress v1.18.4 // indirect
 	github.com/kubescape/go-logger v0.0.28 // indirect
-	github.com/kubescape/k8s-interface v0.0.206 // indirect
+	github.com/kubescape/k8s-interface v0.0.214 // indirect
 	github.com/mackerelio/go-osstat v0.2.5 // indirect
 	github.com/mailru/easyjson v0.9.0 // indirect
 	github.com/mattn/go-colorable v0.1.14 // indirect
