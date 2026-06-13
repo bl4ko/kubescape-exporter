@@ -21,6 +21,9 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 )
 
+// version is injected at build time via -ldflags "-X main.version=...".
+var version = "dev"
+
 func main() {
 	cfg := config.Config{}
 	fs := flag.NewFlagSet("kubescape-exporter", flag.ExitOnError)
@@ -51,7 +54,7 @@ func main() {
 	vulnWatcher := watcher.NewVulnerabilityWatcher(spdxClient, s, cfg.Namespace)
 	compWatcher := watcher.NewComplianceWatcher(spdxClient, s)
 
-	collector := metrics.NewCollector(s, "dev")
+	collector := metrics.NewCollector(s, version)
 	prometheus.MustRegister(collector)
 
 	srv := api.NewServer(s, cfg.Port)
