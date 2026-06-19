@@ -10,7 +10,7 @@ permissions:
 jobs:
   scan:
     name: scan
-    uses: bl4ko/shared-actions/.github/workflows/gitleaks.yml@6af7b49253d4320d71a588c25a21f9ef95b4550a # main
+    uses: bl4ko/shared-actions/.github/workflows/gitleaks.yml@a10d3ecae730917078f33d0e0a438bec5893c4c4 # main
 
   lint:
     name: Lint
