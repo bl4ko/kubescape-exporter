@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
     name: Build and push image
-    uses: bl4ko/shared-actions/.github/workflows/build_image.yml@d886ed1e2c3da7d525407bbfe3b597373fc164be # main
+    uses: bl4ko/shared-actions/.github/workflows/build_image.yml@47a44cec2f56ba01a2986e111b6393c1727b8f78 # main
     with:
       tags: "ghcr.io/bl4ko/kubescape-exporter:${{ github.ref_name }},ghcr.io/bl4ko/kubescape-exporter:latest"
       platform: "linux/amd64"
