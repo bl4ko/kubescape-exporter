@@ -133,6 +133,8 @@ github.com/cilium/cilium v1.17.16 h1:Q7P7zQ2Y9RVmc4oTklyJya3Xgc4aUEa448rb/snKvlI
 github.com/cilium/cilium v1.17.16/go.mod h1:Eo7JFpb7zvlezx4tdT8T6G0FVzE7IClv+DFzovHbi/o=
 github.com/cilium/ebpf v0.17.1 h1:G8mzU81R2JA1nE5/8SRubzqvBMmAmri2VL8BIZPWvV0=
 github.com/cilium/ebpf v0.17.1/go.mod h1:vay2FaYSmIlv3r8dNACd4mW/OCaZLJKJOo+IHBvCIO8=
+github.com/cilium/ebpf v0.22.0 h1:v2ktp0roffpMOj2MMf3idtCQZOsAoC4BJbAJN+ke2bY=
+github.com/cilium/ebpf v0.22.0/go.mod h1:CDzZbe2hC5JjlDC+CY3KFCzlYwN4gbxppYM+Z10bQt4=
 github.com/circonus-labs/circonus-gometrics v2.3.1+incompatible/go.mod h1:nmEj6Dob7S7YxXgwXpfOuvO54S+tGdZdw9fuRZt25Ag=
 github.com/circonus-labs/circonusllhist v0.1.3/go.mod h1:kMXHVDlOchFAehlya5ePtbp5jckzBHf4XRpQvBOLI+I=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
@@ -503,6 +505,8 @@ github.com/kubescape/storage v0.0.323 h1:UrOHhfYLt3/nwkfcRrAVraQGNEz5Ni30iiXH1ga
 github.com/kubescape/storage v0.0.323/go.mod h1:d/1hqWPda2clsjx2wmQgysnB5dThIo3rDKP7RWx+v+M=
 github.com/kubescape/storage v0.0.324 h1:n2v1SAFDhjMp8hC7+lhWWO0zPukiAE1LgdO0ewF+jDY=
 github.com/kubescape/storage v0.0.324/go.mod h1:d/1hqWPda2clsjx2wmQgysnB5dThIo3rDKP7RWx+v+M=
+github.com/kubescape/storage v0.0.326 h1:a+eImch1ui3ABuQqRXDOZNDRQg9h4n517hLAelNqVo0=
+github.com/kubescape/storage v0.0.326/go.mod h1:HHxNWO5FvTFV/XjGYNM8RN5Fnch6uAIRFNwjlXm7ils=
 github.com/kylelemons/godebug v1.1.0 h1:RPNrshWIDI6G2gRW9EHilWtl7Z6Sb1BR0xunSBf0SNc=
 github.com/kylelemons/godebug v1.1.0/go.mod h1:9/0rRGxNHcop5bhtWyNeEfOS8JIWk580+fNqagV/RAw=
 github.com/lunixbochs/vtclean v1.0.0/go.mod h1:pHhQNgMf3btfWnGBVipUOjRYhoOsdGqdm/+2c2E2WMI=

@@ -3,7 +3,7 @@ module github.com/bl4ko/kubescape-exporter
 go 1.26.1
 
 require (
-	github.com/kubescape/storage v0.0.324
+	github.com/kubescape/storage v0.0.326
 	github.com/prometheus/client_golang v1.24.1
 	k8s.io/apimachinery v0.37.0
 	k8s.io/client-go v0.37.0
@@ -29,7 +29,7 @@ require (
 	github.com/cenkalti/backoff/v5 v5.0.3 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/cilium/cilium v1.17.16 // indirect
-	github.com/cilium/ebpf v0.17.1 // indirect
+	github.com/cilium/ebpf v0.22.0 // indirect
 	github.com/containerd/errdefs v1.0.0 // indirect
 	github.com/containers/common v0.63.0 // indirect
 	github.com/coreos/go-oidc/v3 v3.14.1 // indirect
