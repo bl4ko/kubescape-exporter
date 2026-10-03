@@ -3,7 +3,7 @@ module github.com/bl4ko/kubescape-exporter
 go 1.26.1
 
 require (
-	github.com/kubescape/storage v0.0.346
+	github.com/kubescape/storage v0.0.347
 	github.com/prometheus/client_golang v1.24.1
 	k8s.io/apimachinery v0.37.1
 	k8s.io/client-go v0.37.1
